@@ -20,7 +20,7 @@ public class Laboratorio
         {
             if(aux==nombreDelAlumno)
             {
-                alumnos.remove(nombreDelAlumno);
+                alumnos.remove(alumnos.get(i));
             }
         }
     }
@@ -35,7 +35,7 @@ public class Laboratorio
     }
     public String toString()
     {
-        String aux="Nombre del Alumno: "+nombreAl+ "\n"+" Clave del Alumno; "+clave+"\n"+"\n";
+        String aux="Nombre del Alumno: "+nombreAl+" Clave del Alumno; "+clave+"\n";
         return aux;
     }
 }
