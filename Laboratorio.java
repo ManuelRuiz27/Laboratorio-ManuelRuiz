@@ -4,9 +4,14 @@ public class Laboratorio
     private ArrayList<Alumno>alumnos;
     private String nombreAl;
     private String clave;
-    public void altaDeAlumno()
+    public Laboratorio()
+    {
+        alumnos=new ArrayList<Alumno>();
+    }
+    public void altaDeAlumno(String nombreAl, String clave)
     {
         Alumno nuevoAlumno= new Alumno(nombreAl,clave);
+        alumnos.add(nuevoAlumno);
     }
     public void bajaDeAlumno(String nombreDelAlumno)
     {
@@ -30,7 +35,7 @@ public class Laboratorio
     }
     public String toString()
     {
-        String aux="Nombre del Alumno: "+nombreAl+"Clave del Alumno; "+clave;
+        String aux="Nombre del Alumno: "+nombreAl+ "\n"+" Clave del Alumno; "+clave+"\n"+"\n";
         return aux;
     }
 }
